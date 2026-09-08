@@ -8,7 +8,31 @@
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{font-family:Arial,Helvetica,sans-serif;background:#061225;color:#fff;line-height:1.55}
+body
+<div class="service-form-container">
+  <h3>সার্ভিসের জন্য বুকিং বা মেসেজ পাঠান</h3>
+  <form action="https://formspree.io/f/your_form_id" method="POST">
+    <div class="input-group">
+      <input type="text" name="name" placeholder="আপনার নাম" required>
+    </div>
+    <div class="input-group">
+      <input type="tel" name="phone" placeholder="ফোন নম্বর" required>
+    </div>
+    <div class="input-group">
+      <select name="service" required>
+        <option value="">সার্ভিস নির্বাচন করুন</option>
+        <option value="electric">ইলেকট্রিক ওয়্যারিং / সার্ভিস</option>
+        <option value="computer">কম্পিউটার মেরামত / উইন্ডোজ</option>
+        <option value="other">অন্যান্য</option>
+      </select>
+    </div>
+    <div class="input-group">
+      <textarea name="message" placeholder="আপনার সমস্যা বা বিস্তারিত লিখুন..." rows="4"></textarea>
+    </div>
+    <button type="submit" class="submit-btn">মেসেজ পাঠান</button>
+  </form>
+</div>
+{font-family:Arial,Helvetica,sans-serif;background:#061225;color:#fff;line-height:1.55}
 a{text-decoration:none;color:inherit}
 .container{width:min(1180px,94%);margin:auto}
 header{position:sticky;top:0;z-index:20;background:rgba(3,12,28,.94);backdrop-filter:blur(12px);border-bottom:1px solid #203453}
