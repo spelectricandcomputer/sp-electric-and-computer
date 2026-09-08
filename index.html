@@ -1,35 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- Estimator Section -->
-<div class="calculator-card">
-  <h2>⚡ ওয়্যারিং খরচ ক্যালকুলেটর</h2>
-  <p>আপনার ঘরের আনুমানিক ওয়্যারিং খরচ হিসাব করুন:</p>
-
-  <div class="calc-group">
-    <label for="rooms">রুমের সংখ্যা:</label>
-    <input type="number" id="rooms" min="1" value="1" oninput="calculateCost()">
-  </div>
-
-  <div class="calc-group">
-    <label for="points">প্রতি রুমে আনুমানিক পয়েন্ট (লাইট/ফ্যান/সকেট):</label>
-    <input type="number" id="points" min="1" value="4" oninput="calculateCost()">
-  </div>
-
-  <div class="calc-group">
-    <label for="wiringType">ওয়্যারিংয়ের ধরন:</label>
-    <select id="wiringType" onchange="calculateCost()">
-      <option value="basic">সাধারণ ওয়্যারিং (Basic)</option>
-      <option value="premium">কনসিল/প্রিমিয়াম ওয়্যারিং (Concealed)</option>
-    </select>
-  </div>
-
-  <div class="result-box">
-    <h3>আনুমানিক খরচ: <span id="totalCost">৳ 0</span></h3>
-    <small>* এটি একটি আনুমানিক ধারণা। প্রকৃত খরচ স্থান ও মালামালের ওপর ভিত্তি করে পরিবর্তন হতে পারে।</small>
-  </div>
-</div>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="SP Electric & Computer - Electric, Computer, Laptop and CCTV services in Canning, West Bengal.">
