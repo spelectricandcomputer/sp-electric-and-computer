@@ -135,26 +135,113 @@ function sendWhatsApp(e){
   window.open('https://wa.me/918768635426?text='+text,'_blank');
 }
 
-<section style="padding: 40px 20px; background-color: #f9f9f9; text-align: center;">
-  <h2>গ্রাহকদের মতামত (Customer Reviews)</h2>
-  <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; margin-top: 20px;">
+<!-- ==================== CUSTOMER REVIEWS SECTION ==================== -->
+<section id="reviews" class="reviews-section">
+  <div class="reviews-container">
+    <h2>গ্রাহকদের মতামত (Customer Reviews)</h2>
+    <p class="subtitle">আমাদের সেবায় সন্তুষ্ট গ্রাহকদের কিছু অভিজ্ঞতা</p>
     
-    <!-- Review 1 -->
-    <div style="background: #fff; padding: 20px; border-radius: 8px; max-width: 300px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
-      <div style="color: #ffcc00; font-size: 18px;">★★★★★</div>
-      <p>"খুব দ্রুত সার্ভিস পেয়েছি। ক্যানিংয়ে সিসিটিভি ইনস্টলেশনের জন্য সেরা দোকান।"</p>
-      <small><b>- রাহুল বিশ্বাস</b></small>
-    </div>
+    <div class="reviews-grid">
+      <!-- Review 1 -->
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <p class="review-text">"আমার দোকানের সিসিটিভি ক্যামেরা ইনস্টলেশন খুব নিখুঁতভাবে করে দিয়েছেন। সার্ভিস খুব ভালো এবং দ্রুত।"</p>
+        <div class="client-info">
+          <span class="client-name">অমিত কয়াল</span>
+          <span class="client-loc">ক্যানিং, দক্ষিণ ২৪ পরগনা</span>
+        </div>
+      </div>
 
-    <!-- Review 2 -->
-    <div style="background: #fff; padding: 20px; border-radius: 8px; max-width: 300px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
-      <div style="color: #ffcc00; font-size: 18px;">★★★★★</div>
-      <p>"আমার ল্যাপটপের সমস্যা খুব কম খরচে সমাধান করে দিয়েছেন। ধন্যবাদ!"</p>
-      <small><b>- সুদেব মন্ডল</b></small>
-    </div>
+      <!-- Review 2 -->
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <p class="review-text">"ল্যাপটপ স্লো হয়ে গিয়েছিল, এখানে নিয়ে আসার পর SSD লাগিয়ে একদম নতুন করার মতো স্পিড করে দিয়েছেন।"</p>
+        <div class="client-info">
+          <span class="client-name">সুদীপ মন্ডল</span>
+          <span class="client-loc">ক্যানিং টাউন</span>
+        </div>
+      </div>
 
+      <!-- Review 3 -->
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <p class="review-text">"বাড়ির ওয়্যারিং এবং ইলেকট্রিকের কাজের জন্য সেরা। কম খরচে অরিজিনাল জিনিস ব্যবহার করেন।"</p>
+        <div class="client-info">
+          <span class="client-name">রাজেশ বিশ্বাস</span>
+          <span class="client-loc">জীবনতলা</span>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
+
+<!-- CSS Style -->
+<style>
+  .reviews-section {
+    padding: 50px 20px;
+    background-color: #f8f9fa;
+    text-align: center;
+    font-family: inherit;
+  }
+  .reviews-container {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  .reviews-section h2 {
+    font-size: 28px;
+    color: #1a1a1a;
+    margin-bottom: 8px;
+  }
+  .reviews-section .subtitle {
+    color: #666;
+    margin-bottom: 35px;
+    font-size: 15px;
+  }
+  .reviews-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  .review-card {
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .stars {
+    color: #ffb400;
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  .review-text {
+    font-size: 14px;
+    color: #444;
+    line-height: 1.6;
+    margin-bottom: 15px;
+  }
+  .client-info {
+    border-top: 1px solid #eee;
+    padding-top: 10px;
+  }
+  .client-name {
+    display: block;
+    font-weight: bold;
+    color: #1a1a1a;
+    font-size: 15px;
+  }
+  .client-loc {
+    font-size: 12px;
+    color: #888;
+  }
+</style>
+
 
 </script>
 </body>
