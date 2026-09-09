@@ -3,10 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Laptop Service | SP Electric & Computer</title>
 
 <style>
-*{box-sizing:border-box;margin:0;padding:0}
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
 
 body{
   font-family:Arial,sans-serif;
@@ -17,13 +22,20 @@ body{
 
 header{
   background:#071b3a;
-  color:#fff;
+  color:white;
   text-align:center;
-  padding:28px 15px;
+  padding:30px 15px;
 }
 
-header h1{font-size:30px}
-header p{margin-top:6px;color:#d9e7ff}
+header h1{
+  font-size:30px;
+  margin-bottom:8px;
+}
+
+header p{
+  color:#d9e7ff;
+  margin-top:5px;
+}
 
 .container{
   max-width:1000px;
@@ -32,14 +44,16 @@ header p{margin-top:6px;color:#d9e7ff}
 }
 
 .card{
-  background:#fff;
+  background:white;
   padding:22px;
   margin-bottom:18px;
   border-radius:16px;
   box-shadow:0 8px 25px rgba(0,0,0,.12);
 }
 
-.card h2{margin-bottom:12px}
+.card h2{
+  margin-bottom:15px;
+}
 
 .services{
   display:grid;
@@ -67,20 +81,28 @@ header p{margin-top:6px;color:#d9e7ff}
   border-radius:12px;
   text-decoration:none;
   font-weight:bold;
-  color:#fff;
+  color:white;
 }
 
-.call{background:#087f3d}
-.whatsapp{background:#16a34a}
-.email{background:#1769aa}
+.call{
+  background:#087f3d;
+}
+
+.whatsapp{
+  background:#16a34a;
+}
+
+.email{
+  background:#1769aa;
+}
 
 .back{
   display:block;
   text-align:center;
-  margin-top:18px;
-  padding:14px;
+  margin:20px 0;
+  padding:15px;
   background:#071b3a;
-  color:#fff;
+  color:white;
   text-decoration:none;
   border-radius:12px;
   font-weight:bold;
@@ -93,7 +115,13 @@ footer{
 }
 
 @media(max-width:600px){
-  .buttons{grid-template-columns:1fr}
+  .buttons{
+    grid-template-columns:1fr;
+  }
+
+  header h1{
+    font-size:25px;
+  }
 }
 </style>
 </head>
@@ -108,42 +136,84 @@ footer{
 
 <div class="container">
 
+  <!-- LAPTOP SERVICES -->
   <div class="card">
     <h2>💻 Our Laptop Services</h2>
 
     <div class="services">
+
       <div class="service">🛠️ Laptop Repair & Maintenance</div>
+
       <div class="service">💿 Windows Installation & Setup</div>
+
       <div class="service">🚀 Laptop Slow Problem Fix</div>
+
       <div class="service">🦠 Virus & Malware Removal</div>
+
       <div class="service">💾 Data Backup & Recovery</div>
+
       <div class="service">🔧 RAM & SSD Upgrade</div>
+
       <div class="service">🔋 Battery Replacement</div>
-<div class="card">
-  <h2>📞 Contact Us</h2>
 
-  <p><b>Opening:</b> 24×7</p>
-  <p><b>Location:</b> Canning, Canning Town, South 24 Parganas, West Bengal – 743329</p>
+      <div class="service">🖥️ Laptop Display Repair</div>
 
-  <div class="buttons">
-    <a class="btn call" href="tel:+918768635426">📞 CALL NOW</a>
+      <div class="service">⌨️ Keyboard Repair & Replacement</div>
 
-    <a class="btn whatsapp"
-       href="https://wa.me/918768635426?text=Hello%20SP%20Electric%20and%20Computer%2C%20I%20need%20Laptop%20Service."
-       target="_blank">
-       💬 WHATSAPP
-    </a>
+      <div class="service">🔌 Charging & Power Problem</div>
 
-    <a class="btn email"
-       href="mailto:spelectricandcomputer@gmail.com">
-       📧 EMAIL
-    </a>
+      <div class="service">🌡️ Overheating & Fan Problem</div>
+
+      <div class="service">🔊 Speaker & Sound Problem</div>
+
+    </div>
   </div>
+
+
+  <!-- CONTACT SECTION -->
+  <div class="card">
+
+    <h2>📞 Contact Us</h2>
+
+    <p>
+      <b>Opening:</b> 24×7
+    </p>
+
+    <p>
+      <b>Location:</b>
+      Canning, Canning Town, South 24 Parganas,
+      West Bengal – 743329
+    </p>
+
+    <div class="buttons">
+
+      <a class="btn call" href="tel:+918768635426">
+        📞 CALL NOW
+      </a>
+
+      <a class="btn whatsapp"
+         href="https://wa.me/918768635426?text=Hello%20SP%20Electric%20and%20Computer%2C%20I%20need%20Laptop%20Service."
+         target="_blank">
+        💬 WHATSAPP
+      </a>
+
+      <a class="btn email"
+         href="mailto:spelectricandcomputer@gmail.com">
+        📧 EMAIL
+      </a>
+
+    </div>
+
+  </div>
+
+
+  <!-- BACK TO HOME -->
+  <a class="back" href="index.html">
+    🏠 BACK TO HOME
+  </a>
+
 </div>
 
-<a class="back" href="index.html">🏠 BACK TO HOME</a>
-
-</div>
 
 <footer>
   © 2026 SP Electric & Computer | Santanu Pramanik
@@ -151,4 +221,3 @@ footer{
 
 </body>
 </html>
-     
