@@ -55,7 +55,7 @@ header{
   gap:15px;
 }
 
-/* GRAPHICAL LOGO */
+/* LOGO */
 .logo{
   display:flex;
   align-items:center;
@@ -96,7 +96,7 @@ header{
   color:#ffe000;
 }
 
-/* 3 DOT MENU */
+/* MENU */
 .menu-wrap{
   position:relative;
 }
@@ -111,7 +111,6 @@ header{
   font-size:28px;
   line-height:38px;
   cursor:pointer;
-  transition:.2s;
 }
 
 .menu-btn:hover{
@@ -141,7 +140,6 @@ header{
   padding:12px 14px;
   border-radius:9px;
   color:#dce9f8;
-  transition:.2s;
 }
 
 .dropdown a:hover{
@@ -180,7 +178,6 @@ header{
     radial-gradient(circle at 50% 10%,#123d79 0,#061225 55%);
 }
 
-/* GRAPHICAL BRAND TITLE */
 .brand-title{
   text-align:center;
   padding:22px 10px 25px;
@@ -295,7 +292,6 @@ section{
   display:grid;
   grid-template-columns:1.2fr .8fr;
   gap:28px;
-  align-items:stretch;
 }
 
 .box{
@@ -367,7 +363,49 @@ textarea{
   resize:vertical;
 }
 
-/* FLOATING BUTTON */
+/* =========================
+   CUSTOMER REVIEWS
+========================= */
+
+.reviews-section{
+  background:
+    radial-gradient(circle at 50% 0%,#123d79 0,#061225 65%);
+  text-align:center;
+}
+
+.reviews-box{
+  max-width:760px;
+  margin:auto;
+  background:linear-gradient(180deg,#10233d,#0b172a);
+  border:1px solid #263b5b;
+  border-radius:20px;
+  padding:35px 25px;
+  box-shadow:0 15px 45px rgba(0,0,0,.25);
+}
+
+.review-icon{
+  font-size:3rem;
+  margin-bottom:10px;
+}
+
+.reviews-box h2{
+  font-size:2.2rem;
+  margin-bottom:8px;
+}
+
+.reviews-box p{
+  color:#aebdd1;
+  margin-bottom:22px;
+}
+
+.review-note{
+  font-size:.9rem;
+  color:#7fd3ff !important;
+  margin-top:15px;
+  margin-bottom:0 !important;
+}
+
+/* FLOATING */
 .float{
   position:fixed;
   right:18px;
@@ -384,7 +422,7 @@ footer{
 }
 
 /* =========================
-   WORK GALLERY PAGE
+   GALLERY
 ========================= */
 
 .gallery-page{
@@ -411,7 +449,6 @@ footer{
 
 .gallery-head h2 span{
   color:#00d9ff;
-  text-shadow:0 0 12px rgba(0,217,255,.5);
 }
 
 .gallery-head p{
@@ -433,7 +470,6 @@ footer{
   background:#0b192d;
   color:#dce9f8;
   cursor:pointer;
-  transition:.2s;
 }
 
 .filter-btn:hover,
@@ -457,13 +493,11 @@ footer{
   background:#0d1d33;
   border:1px solid #263b5b;
   cursor:pointer;
-  transition:.3s;
 }
 
 .gallery-card:hover{
   transform:translateY(-5px);
   border-color:#00d9ff;
-  box-shadow:0 12px 35px rgba(0,217,255,.16);
 }
 
 .gallery-card img{
@@ -484,11 +518,6 @@ footer{
     transparent 30%,
     rgba(0,0,0,.85) 100%
   );
-  opacity:.95;
-}
-
-.gallery-overlay strong{
-  font-size:1.05rem;
 }
 
 .gallery-overlay small{
@@ -507,7 +536,6 @@ footer{
 
 .gallery-empty .big{
   font-size:3rem;
-  margin-bottom:10px;
 }
 
 /* LIGHTBOX */
@@ -530,7 +558,6 @@ footer{
   max-width:95%;
   max-height:85vh;
   border-radius:12px;
-  box-shadow:0 20px 70px rgba(0,0,0,.7);
 }
 
 .lightbox-close{
@@ -609,6 +636,14 @@ footer{
     font-size:1.9rem;
   }
 
+  .reviews-box{
+    padding:28px 18px;
+  }
+
+  .reviews-box h2{
+    font-size:1.8rem;
+  }
+
   .gallery-page{
     padding-top:35px;
   }
@@ -641,10 +676,6 @@ footer{
   .gallery-overlay small{
     font-size:.7rem;
   }
-
-  .dropdown{
-    width:190px;
-  }
 }
 </style>
 </head>
@@ -653,763 +684,659 @@ footer{
 
 <!-- HEADER -->
 <header>
-  <div class="container nav">
+<div class="container nav">
 
-    <a class="logo" href="#home" onclick="showHome()">
-      <span class="logo-sp">SP</span>
-      <span class="logo-text">
-        Electric <span>&amp;</span> Computer
-      </span>
-    </a>
+<a class="logo" href="#home" onclick="showHome()">
+<span class="logo-sp">SP</span>
+<span class="logo-text">
+Electric <span>&amp;</span> Computer
+</span>
+</a>
 
-    <div class="navlinks">
-      <a href="#home">Home</a>
-      <a href="#services">Services</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
-    </div>
+<div class="navlinks">
+<a href="#home">Home</a>
+<a href="#services">Services</a>
+<a href="#about">About</a>
+<a href="#reviews">Reviews</a>
+<a href="#contact">Contact</a>
+</div>
 
-    <!-- 3 DOT MENU -->
-    <div class="menu-wrap">
+<div class="menu-wrap">
 
-      <button class="menu-btn" onclick="toggleMenu()">
-        ⋮
-      </button>
+<button class="menu-btn" onclick="toggleMenu()">⋮</button>
 
-      <div class="dropdown" id="dropdownMenu">
+<div class="dropdown" id="dropdownMenu">
 
-        <a href="#home" onclick="showHome(); closeMenu();">
-          🏠 Home
-        </a>
+<a href="#home" onclick="showHome();closeMenu();">🏠 Home</a>
 
-        <a href="#services" onclick="showHome(); closeMenu();">
-          🛠️ Services
-        </a>
+<a href="#services" onclick="showHome();closeMenu();">🛠️ Services</a>
 
-        <a href="#about" onclick="showHome(); closeMenu();">
-          ℹ️ About
-        </a>
+<a href="#about" onclick="showHome();closeMenu();">ℹ️ About</a>
 
-        <a href="#contact" onclick="showHome(); closeMenu();">
-          📞 Contact
-        </a>
+<a href="#reviews" onclick="showHome();closeMenu();">⭐ Reviews</a>
 
-        <a href="#works" onclick="showGallery(); closeMenu();">
-          🖼️ Our Work Gallery
-        </a>
+<a href="#contact" onclick="showHome();closeMenu();">📞 Contact</a>
 
-      </div>
+<a href="#works" onclick="showGallery();closeMenu();">🖼️ Our Work Gallery</a>
 
-    </div>
+</div>
+</div>
 
-  </div>
+</div>
 </header>
 
 
-<!-- MAIN HOME -->
+<!-- HOME -->
 <main id="homePage">
 
-  <!-- HERO -->
-  <section class="hero">
+<!-- HERO -->
+<section class="hero">
 
-    <div class="container">
+<div class="container">
 
-      <div class="brand-title">
+<div class="brand-title">
 
-        <span class="sp">
-          ⚡ SP ⚡
-        </span>
+<span class="sp">⚡ SP ⚡</span>
 
-        <span class="name">
-          ELECTRIC &amp; COMPUTER
-        </span>
+<span class="name">
+ELECTRIC &amp; COMPUTER
+</span>
 
-        <div class="tagline">
-          ELECTRICAL • COMPUTER • LAPTOP • CCTV
-        </div>
+<div class="tagline">
+ELECTRICAL • COMPUTER • LAPTOP • CCTV
+</div>
 
-      </div>
+</div>
 
-      <img
-        class="banner"
-        src="sp_electric_and_computer_banner.png"
-        alt="SP Electric & Computer banner">
+<img
+class="banner"
+src="sp_electric_and_computer_banner.png"
+alt="SP Electric & Computer banner">
 
-      <div class="hero-actions">
+<div class="hero-actions">
 
-        <a class="btn" href="tel:+918768635426">
-          📞 Call 8768635426
-        </a>
+<a class="btn" href="tel:+918768635426">
+📞 Call 8768635426
+</a>
 
-        <a
-          class="btn"
-          href="https://wa.me/918768635426"
-          target="_blank">
-          💬 WhatsApp
-        </a>
+<a
+class="btn"
+href="https://wa.me/918768635426"
+target="_blank">
+💬 WhatsApp
+</a>
 
-        <a class="btn alt" href="#contact">
-          Contact Details
-        </a>
+<a class="btn alt" href="#contact">
+Contact Details
+</a>
 
-      </div>
+</div>
 
-    </div>
+</div>
+</section>
 
-  </section>
 
+<!-- SERVICES -->
+<section id="services">
 
-  <!-- SERVICES -->
-  <section id="services">
+<div class="container">
 
-    <div class="container">
+<div class="head">
 
-      <div class="head">
+<h2>Our Services</h2>
 
-        <h2>Our Services</h2>
+<p>
+Electric, Computer, Laptop &amp; CCTV solutions under one roof.
+</p>
 
-        <p>
-          Electric, Computer, Laptop &amp; CCTV solutions under one roof.
-        </p>
+</div>
 
-      </div>
+<div class="grid">
 
-      <div class="grid">
+<a class="card" href="electric.html">
+<div class="icon">⚡</div>
+<h3>Electric</h3>
+<p>
+Wiring, switches, DB/MCB, fans, lights and electrical accessories.
+</p>
+</a>
 
-        <a class="card" href="electric.html">
+<a class="card" href="computer.html">
+<div class="icon">🖥️</div>
+<h3>Computer</h3>
+<p>
+Sales, service, repair, accessories, software and networking.
+</p>
+</a>
 
-          <div class="icon">⚡</div>
+<a class="card" href="laptop.html">
+<div class="icon">💻</div>
+<h3>Laptop</h3>
+<p>
+New &amp; used sales, service, upgrades, troubleshooting and support.
+</p>
+</a>
 
-          <h3>Electric</h3>
+<a class="card" href="cctv.html">
+<div class="icon">📹</div>
+<h3>CCTV</h3>
+<p>
+Installation, configuration, monitoring and security solutions.
+</p>
+</a>
 
-          <p>
-            Wiring, switches, DB/MCB, fans, lights and electrical accessories.
-          </p>
+</div>
+</div>
+</section>
 
-        </a>
 
+<!-- ABOUT -->
+<section id="about">
 
-        <a class="card" href="computer.html">
+<div class="container about">
 
-          <div class="icon">🖥️</div>
+<div class="box">
 
-          <h3>Computer</h3>
+<h2>SP Electric &amp; Computer</h2>
 
-          <p>
-            Sales, service, repair, accessories, software and networking.
-          </p>
+<p>
+Your trusted partner for electrical and computer solutions
+in Canning, West Bengal.
+</p>
 
-        </a>
+<p>
+We provide practical solutions for homes, offices and businesses,
+with service available <b>24×7</b>.
+</p>
 
+<div class="list">
 
-        <a class="card" href="laptop.html">
+<div>✓ Genuine Products</div>
+<div>✓ Expert Technicians</div>
+<div>✓ Best Price</div>
+<div>✓ Reliable Service</div>
 
-          <div class="icon">💻</div>
+</div>
 
-          <h3>Laptop</h3>
+</div>
 
-          <p>
-            New &amp; used sales, service, upgrades, troubleshooting and support.
-          </p>
 
-        </a>
+<div class="box">
 
+<h2>Why Choose Us?</h2>
 
-        <a class="card" href="cctv.html">
+<p>
+One-stop support for power, computing and security needs.
+</p>
 
-          <div class="icon">📹</div>
+<a class="btn" href="#contact">
+Get in Touch
+</a>
 
-          <h3>CCTV</h3>
+</div>
 
-          <p>
-            Installation, configuration, monitoring and security solutions.
-          </p>
+</div>
+</section>
 
-        </a>
 
-      </div>
+<!-- =========================
+     REVIEWS
+========================= -->
 
-    </div>
+<section class="reviews-section" id="reviews">
 
-  </section>
+<div class="container">
 
+<div class="reviews-box">
 
-  <!-- ABOUT -->
-  <section id="about">
+<div class="review-icon">⭐</div>
 
-    <div class="container about">
+<h2>Customer Reviews</h2>
 
-      <div class="box">
+<p>
+Had a good experience with SP Electric &amp; Computer?
+We would love to hear from you.
+</p>
 
-        <h2>SP Electric &amp; Computer</h2>
+<a
+class="btn"
+href="YOUR_GOOGLE_FORM_LINK_HERE"
+target="_blank"
+rel="noopener">
+✍️ Give Us a Review
+</a>
 
-        <p>
-          Your trusted partner for electrical and computer solutions
-          in Canning, West Bengal.
-        </p>
+<p class="review-note">
+Your honest feedback helps us improve our service.
+</p>
 
-        <p>
-          We provide practical solutions for homes, offices and businesses,
-          with service available <b>24×7</b>.
-        </p>
+</div>
 
-        <div class="list">
+</div>
 
-          <div>✓ Genuine Products</div>
-          <div>✓ Expert Technicians</div>
-          <div>✓ Best Price</div>
-          <div>✓ Reliable Service</div>
+</section>
 
-        </div>
 
-      </div>
+<!-- CONTACT -->
+<section id="contact">
 
+<div class="container">
 
-      <div class="box">
+<div class="head">
 
-        <h2>Why Choose Us?</h2>
+<h2>Contact Us</h2>
 
-        <p>
-          One-stop support for power, computing and security needs.
-        </p>
+<p>
+We're open 24×7 — always here for you.
+</p>
 
-        <a class="btn" href="#contact">
-          Get in Touch
-        </a>
+</div>
 
-      </div>
+<div class="contact">
 
-    </div>
+<div class="box">
 
-  </section>
+<div class="contact-item">
 
+<span class="label">
+📞 CALL US
+</span>
 
-  <!-- CONTACT -->
-  <section id="contact">
+<a href="tel:+918768635426">
+8768635426
+</a>
+/
+<a href="tel:+919832123146">
+9832123146
+</a>
 
-    <div class="container">
+</div>
 
-      <div class="head">
 
-        <h2>Contact Us</h2>
+<div class="contact-item">
 
-        <p>
-          We're open 24×7 — always here for you.
-        </p>
+<span class="label">
+💬 WHATSAPP
+</span>
 
-      </div>
+<a href="https://wa.me/918768635426" target="_blank">
+8768635426
+</a>
+/
+<a href="https://wa.me/919832123146" target="_blank">
+9832123146
+</a>
 
+</div>
 
-      <div class="contact">
 
-        <div class="box">
+<div class="contact-item">
 
-          <div class="contact-item">
+<span class="label">
+📧 EMAIL
+</span>
 
-            <span class="label">
-              📞 CALL US
-            </span>
+<a href="mailto:spelectricandcomputer@gmail.com">
+spelectricandcomputer@gmail.com
+</a>
 
-            <a href="tel:+918768635426">
-              8768635426
-            </a>
+</div>
 
-            /
 
-            <a href="tel:+919832123146">
-              9832123146
-            </a>
+<div class="contact-item">
 
-          </div>
+<span class="label">
+📍 ADDRESS
+</span>
 
+Canning, Canning Town,
+South 24 Parganas,
+West Bengal, 743329
 
-          <div class="contact-item">
+</div>
 
-            <span class="label">
-              💬 WHATSAPP
-            </span>
 
-            <a
-              href="https://wa.me/918768635426"
-              target="_blank">
-              8768635426
-            </a>
+<div class="contact-item">
 
-            /
+<span class="label">
+🕐 OPENING HOURS
+</span>
 
-            <a
-              href="https://wa.me/919832123146"
-              target="_blank">
-              9832123146
-            </a>
+<b>
+24×7 — Open 24 Hours, 7 Days a Week
+</b>
 
-          </div>
+</div>
 
+</div>
 
-          <div class="contact-item">
 
-            <span class="label">
-              📧 EMAIL
-            </span>
+<div class="box">
 
-            <a href="mailto:spelectricandcomputer@gmail.com">
-              spelectricandcomputer@gmail.com
-            </a>
+<h3>Send an Enquiry</h3>
 
-          </div>
+<p>
+Fill this form and your WhatsApp app will open
+with the enquiry.
+</p>
 
+<form onsubmit="sendWhatsApp(event)">
 
-          <div class="contact-item">
+<input
+id="name"
+placeholder="Your name"
+required>
 
-            <span class="label">
-              📍 ADDRESS
-            </span>
+<input
+id="phone"
+placeholder="Your phone number"
+required>
 
-            Canning, Canning Town,
-            South 24 Parganas,
-            West Bengal, 743329
+<textarea
+id="msg"
+placeholder="What service do you need?"
+required></textarea>
 
-          </div>
+<button class="btn" type="submit">
+Send via WhatsApp
+</button>
 
+</form>
 
-          <div class="contact-item">
+</div>
 
-            <span class="label">
-              🕐 OPENING HOURS
-            </span>
+</div>
 
-            <b>
-              24×7 — Open 24 Hours, 7 Days a Week
-            </b>
+</div>
 
-          </div>
-
-        </div>
-
-
-        <div class="box">
-
-          <h3>Send an Enquiry</h3>
-
-          <p>
-            Fill this form and your WhatsApp app will open
-            with the enquiry.
-          </p>
-
-          <form onsubmit="sendWhatsApp(event)">
-
-            <input
-              id="name"
-              placeholder="Your name"
-              required>
-
-            <input
-              id="phone"
-              placeholder="Your phone number"
-              required>
-
-            <textarea
-              id="msg"
-              placeholder="What service do you need?"
-              required></textarea>
-
-            <button class="btn" type="submit">
-              Send via WhatsApp
-            </button>
-
-          </form>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </section>
+</section>
 
 </main>
 
 
-<!-- =========================
-     WORK GALLERY
-========================= -->
-
+<!-- GALLERY -->
 <section class="gallery-page" id="works">
 
-  <div class="container">
+<div class="container">
 
-    <div class="gallery-head">
+<div class="gallery-head">
 
-      <h2>
-        🛠️ <span>Our Work</span> Gallery
-      </h2>
+<h2>
+🛠️ <span>Our Work</span> Gallery
+</h2>
 
-      <p>
-        Some of our electrical, computer, laptop and CCTV work.
-      </p>
+<p>
+Some of our electrical, computer, laptop and CCTV work.
+</p>
 
-    </div>
+</div>
 
 
-    <!-- FILTER -->
-    <div class="gallery-filter">
+<div class="gallery-filter">
 
-      <button
-        class="filter-btn active"
-        onclick="filterGallery('all',this)">
-        All
-      </button>
+<button class="filter-btn active"
+onclick="filterGallery('all',this)">
+All
+</button>
 
-      <button
-        class="filter-btn"
-        onclick="filterGallery('electric',this)">
-        ⚡ Electric
-      </button>
+<button class="filter-btn"
+onclick="filterGallery('electric',this)">
+⚡ Electric
+</button>
 
-      <button
-        class="filter-btn"
-        onclick="filterGallery('computer',this)">
-        🖥️ Computer
-      </button>
+<button class="filter-btn"
+onclick="filterGallery('computer',this)">
+🖥️ Computer
+</button>
 
-      <button
-        class="filter-btn"
-        onclick="filterGallery('laptop',this)">
-        💻 Laptop
-      </button>
+<button class="filter-btn"
+onclick="filterGallery('laptop',this)">
+💻 Laptop
+</button>
 
-      <button
-        class="filter-btn"
-        onclick="filterGallery('cctv',this)">
-        📹 CCTV
-      </button>
+<button class="filter-btn"
+onclick="filterGallery('cctv',this)">
+📹 CCTV
+</button>
 
-    </div>
+</div>
 
 
-    <!-- GALLERY -->
-    <div class="gallery-grid" id="galleryGrid">
+<div class="gallery-grid" id="galleryGrid">
 
+<div class="gallery-card"
+data-category="electric"
+onclick="openLightbox('work1.jpg')">
 
-      <!-- PHOTO 1 -->
-      <div
-        class="gallery-card"
-        data-category="electric"
-        onclick="openLightbox('work1.jpg')">
+<img src="work1.jpg" alt="Electric Work">
 
-        <img
-          src="work1.jpg"
-          alt="Electric Work">
+<div class="gallery-overlay">
+<strong>⚡ Electrical Work</strong>
+<small>View Photo</small>
+</div>
 
-        <div class="gallery-overlay">
+</div>
 
-          <strong>⚡ Electrical Work</strong>
 
-          <small>View Photo</small>
+<div class="gallery-card"
+data-category="computer"
+onclick="openLightbox('work2.jpg')">
 
-        </div>
+<img src="work2.jpg" alt="Computer Work">
 
-      </div>
+<div class="gallery-overlay">
+<strong>🖥️ Computer Work</strong>
+<small>View Photo</small>
+</div>
 
+</div>
 
-      <!-- PHOTO 2 -->
-      <div
-        class="gallery-card"
-        data-category="computer"
-        onclick="openLightbox('work2.jpg')">
 
-        <img
-          src="work2.jpg"
-          alt="Computer Work">
+<div class="gallery-card"
+data-category="laptop"
+onclick="openLightbox('work3.jpg')">
 
-        <div class="gallery-overlay">
+<img src="work3.jpg" alt="Laptop Work">
 
-          <strong>🖥️ Computer Work</strong>
+<div class="gallery-overlay">
+<strong>💻 Laptop Work</strong>
+<small>View Photo</small>
+</div>
 
-          <small>View Photo</small>
+</div>
 
-        </div>
 
-      </div>
+<div class="gallery-card"
+data-category="cctv"
+onclick="openLightbox('work4.jpg')">
 
+<img src="work4.jpg" alt="CCTV Work">
 
-      <!-- PHOTO 3 -->
-      <div
-        class="gallery-card"
-        data-category="laptop"
-        onclick="openLightbox('work3.jpg')">
+<div class="gallery-overlay">
+<strong>📹 CCTV Work</strong>
+<small>View Photo</small>
+</div>
 
-        <img
-          src="work3.jpg"
-          alt="Laptop Work">
+</div>
 
-        <div class="gallery-overlay">
 
-          <strong>💻 Laptop Work</strong>
+<div class="gallery-card"
+data-category="electric"
+onclick="openLightbox('work5.jpg')">
 
-          <small>View Photo</small>
+<img src="work5.jpg" alt="Electric Work">
 
-        </div>
+<div class="gallery-overlay">
+<strong>⚡ Electrical Work</strong>
+<small>View Photo</small>
+</div>
 
-      </div>
+</div>
 
 
-      <!-- PHOTO 4 -->
-      <div
-        class="gallery-card"
-        data-category="cctv"
-        onclick="openLightbox('work4.jpg')">
+<div class="gallery-card"
+data-category="computer"
+onclick="openLightbox('work6.jpg')">
 
-        <img
-          src="work4.jpg"
-          alt="CCTV Work">
+<img src="work6.jpg" alt="Computer Work">
 
-        <div class="gallery-overlay">
+<div class="gallery-overlay">
+<strong>🖥️ Computer Work</strong>
+<small>View Photo</small>
+</div>
 
-          <strong>📹 CCTV Work</strong>
+</div>
 
-          <small>View Photo</small>
 
-        </div>
+<div class="gallery-card"
+data-category="laptop"
+onclick="openLightbox('work7.jpg')">
 
-      </div>
+<img src="work7.jpg" alt="Laptop Work">
 
+<div class="gallery-overlay">
+<strong>💻 Laptop Work</strong>
+<small>View Photo</small>
+</div>
 
-      <!-- PHOTO 5 -->
-      <div
-        class="gallery-card"
-        data-category="electric"
-        onclick="openLightbox('work5.jpg')">
+</div>
 
-        <img
-          src="work5.jpg"
-          alt="Electric Work">
 
-        <div class="gallery-overlay">
+<div class="gallery-card"
+data-category="cctv"
+onclick="openLightbox('work8.jpg')">
 
-          <strong>⚡ Electrical Work</strong>
+<img src="work8.jpg" alt="CCTV Work">
 
-          <small>View Photo</small>
+<div class="gallery-overlay">
+<strong>📹 CCTV Work</strong>
+<small>View Photo</small>
+</div>
 
-        </div>
+</div>
 
-      </div>
 
+<div class="gallery-card"
+data-category="electric"
+onclick="openLightbox('work9.jpg')">
 
-      <!-- PHOTO 6 -->
-      <div
-        class="gallery-card"
-        data-category="computer"
-        onclick="openLightbox('work6.jpg')">
+<img src="work9.jpg" alt="Electric Work">
 
-        <img
-          src="work6.jpg"
-          alt="Computer Work">
+<div class="gallery-overlay">
+<strong>⚡ Electrical Work</strong>
+<small>View Photo</small>
+</div>
 
-        <div class="gallery-overlay">
+</div>
 
-          <strong>🖥️ Computer Work</strong>
 
-          <small>View Photo</small>
+<div class="gallery-card"
+data-category="computer"
+onclick="openLightbox('work10.jpg')">
 
-        </div>
+<img src="work10.jpg" alt="Computer Work">
 
-      </div>
+<div class="gallery-overlay">
+<strong>🖥️ Computer Work</strong>
+<small>View Photo</small>
+</div>
 
+</div>
 
-      <!-- PHOTO 7 -->
-      <div
-        class="gallery-card"
-        data-category="laptop"
-        onclick="openLightbox('work7.jpg')">
 
-        <img
-          src="work7.jpg"
-          alt="Laptop Work">
+<div class="gallery-card"
+data-category="laptop"
+onclick="openLightbox('work11.jpg')">
 
-        <div class="gallery-overlay">
+<img src="work11.jpg" alt="Laptop Work">
 
-          <strong>💻 Laptop Work</strong>
+<div class="gallery-overlay">
+<strong>💻 Laptop Work</strong>
+<small>View Photo</small>
+</div>
 
-          <small>View Photo</small>
+</div>
 
-        </div>
 
-      </div>
+<div class="gallery-card"
+data-category="cctv"
+onclick="openLightbox('work12.jpg')">
 
+<img src="work12.jpg" alt="CCTV Work">
 
-      <!-- PHOTO 8 -->
-      <div
-        class="gallery-card"
-        data-category="cctv"
-        onclick="openLightbox('work8.jpg')">
+<div class="gallery-overlay">
+<strong>📹 CCTV Work</strong>
+<small>View Photo</small>
+</div>
 
-        <img
-          src="work8.jpg"
-          alt="CCTV Work">
+</div>
 
-        <div class="gallery-overlay">
+</div>
 
-          <strong>📹 CCTV Work</strong>
 
-          <small>View Photo</small>
+<div class="gallery-empty" id="galleryEmpty">
 
-        </div>
+<div class="big">📷</div>
 
-      </div>
+<h3>Our Work Photos Coming Soon</h3>
 
+<p>
+Work photos will be added here soon.
+</p>
 
-      <!-- PHOTO 9 -->
-      <div
-        class="gallery-card"
-        data-category="electric"
-        onclick="openLightbox('work9.jpg')">
+</div>
 
-        <img
-          src="work9.jpg"
-          alt="Electric Work">
 
-        <div class="gallery-overlay">
+<div style="text-align:center;margin-top:30px;">
 
-          <strong>⚡ Electrical Work</strong>
+<a class="btn alt"
+href="#home"
+onclick="showHome()">
+← Back to Home
+</a>
 
-          <small>View Photo</small>
+</div>
 
-        </div>
-
-      </div>
-
-
-      <!-- PHOTO 10 -->
-      <div
-        class="gallery-card"
-        data-category="computer"
-        onclick="openLightbox('work10.jpg')">
-
-        <img
-          src="work10.jpg"
-          alt="Computer Work">
-
-        <div class="gallery-overlay">
-
-          <strong>🖥️ Computer Work</strong>
-
-          <small>View Photo</small>
-
-        </div>
-
-      </div>
-
-
-      <!-- PHOTO 11 -->
-      <div
-        class="gallery-card"
-        data-category="laptop"
-        onclick="openLightbox('work11.jpg')">
-
-        <img
-          src="work11.jpg"
-          alt="Laptop Work">
-
-        <div class="gallery-overlay">
-
-          <strong>💻 Laptop Work</strong>
-
-          <small>View Photo</small>
-
-        </div>
-
-      </div>
-
-
-      <!-- PHOTO 12 -->
-      <div
-        class="gallery-card"
-        data-category="cctv"
-        onclick="openLightbox('work12.jpg')">
-
-        <img
-          src="work12.jpg"
-          alt="CCTV Work">
-
-        <div class="gallery-overlay">
-
-          <strong>📹 CCTV Work</strong>
-
-          <small>View Photo</small>
-
-        </div>
-
-      </div>
-
-    </div>
-
-
-    <div class="gallery-empty" id="galleryEmpty">
-
-      <div class="big">📷</div>
-
-      <h3>Our Work Photos Coming Soon</h3>
-
-      <p>
-        Work photos will be added here soon.
-      </p>
-
-    </div>
-
-
-    <div style="text-align:center;margin-top:30px;">
-
-      <a
-        class="btn alt"
-        href="#home"
-        onclick="showHome()">
-        ← Back to Home
-      </a>
-
-    </div>
-
-  </div>
-
+</div>
 </section>
 
 
 <!-- LIGHTBOX -->
 <div
-  class="lightbox"
-  id="lightbox"
-  onclick="closeLightbox()">
+class="lightbox"
+id="lightbox"
+onclick="closeLightbox()">
 
-  <span
-    class="lightbox-close"
-    onclick="closeLightbox()">
-    ×
-  </span>
+<span
+class="lightbox-close"
+onclick="closeLightbox()">
+×
+</span>
 
-  <img
-    id="lightboxImg"
-    src=""
-    alt="Work Photo">
+<img
+id="lightboxImg"
+src=""
+alt="Work Photo">
 
 </div>
 
 
 <!-- FLOATING WHATSAPP -->
 <a
-  class="btn float"
-  href="https://wa.me/918768635426"
-  target="_blank">
-  💬 WhatsApp
+class="btn float"
+href="https://wa.me/918768635426"
+target="_blank">
+💬 WhatsApp
 </a>
 
 
 <!-- FOOTER -->
 <footer>
 
-  © <span id="year"></span>
-  SP Electric &amp; Computer
-  • Canning, West Bengal
-  • Open 24×7
+© <span id="year"></span>
+SP Electric &amp; Computer
+• Canning, West Bengal
+• Open 24×7
 
 </footer>
 
@@ -1417,189 +1344,178 @@ footer{
 <script>
 
 /* YEAR */
-
 document.getElementById('year').textContent =
-  new Date().getFullYear();
+new Date().getFullYear();
 
 
-/* 3 DOT MENU */
-
+/* MENU */
 function toggleMenu(){
 
-  document
-    .getElementById('dropdownMenu')
-    .classList.toggle('show');
+document
+.getElementById('dropdownMenu')
+.classList.toggle('show');
 
 }
 
-
 function closeMenu(){
 
-  document
-    .getElementById('dropdownMenu')
-    .classList.remove('show');
+document
+.getElementById('dropdownMenu')
+.classList.remove('show');
 
 }
 
 
 /* SHOW HOME */
-
 function showHome(){
 
-  document
-    .getElementById('homePage')
-    .style.display = 'block';
+document
+.getElementById('homePage')
+.style.display='block';
 
-  document
-    .getElementById('works')
-    .classList.remove('active');
+document
+.getElementById('works')
+.classList.remove('active');
 
-  window.scrollTo({
-    top:0,
-    behavior:'smooth'
-  });
+window.scrollTo({
+top:0,
+behavior:'smooth'
+});
 
 }
 
 
 /* SHOW GALLERY */
-
 function showGallery(){
 
-  document
-    .getElementById('homePage')
-    .style.display = 'none';
+document
+.getElementById('homePage')
+.style.display='none';
 
-  document
-    .getElementById('works')
-    .classList.add('active');
+document
+.getElementById('works')
+.classList.add('active');
 
-  window.scrollTo({
-    top:0,
-    behavior:'smooth'
-  });
+window.scrollTo({
+top:0,
+behavior:'smooth'
+});
 
 }
 
 
-/* CLOSE MENU WHEN CLICKING OUTSIDE */
-
+/* CLOSE MENU */
 document.addEventListener('click',function(e){
 
-  const menu =
-    document.querySelector('.menu-wrap');
+const menu =
+document.querySelector('.menu-wrap');
 
-  if(!menu.contains(e.target)){
-    closeMenu();
-  }
+if(!menu.contains(e.target)){
+closeMenu();
+}
 
 });
 
 
-/* GALLERY FILTER */
-
+/* FILTER */
 function filterGallery(category,button){
 
-  const cards =
-    document.querySelectorAll('.gallery-card');
+const cards =
+document.querySelectorAll('.gallery-card');
 
-  const buttons =
-    document.querySelectorAll('.filter-btn');
+const buttons =
+document.querySelectorAll('.filter-btn');
 
-  buttons.forEach(function(btn){
-    btn.classList.remove('active');
-  });
+buttons.forEach(function(btn){
+btn.classList.remove('active');
+});
 
-  button.classList.add('active');
+button.classList.add('active');
 
-  let visible = 0;
+let visible=0;
 
-  cards.forEach(function(card){
+cards.forEach(function(card){
 
-    if(
-      category === 'all' ||
-      card.dataset.category === category
-    ){
+if(
+category==='all' ||
+card.dataset.category===category
+){
 
-      card.style.display = 'block';
-      visible++;
+card.style.display='block';
+visible++;
 
-    }else{
+}else{
 
-      card.style.display = 'none';
+card.style.display='none';
 
-    }
+}
 
-  });
+});
 
-  document.getElementById('galleryEmpty').style.display =
-    visible === 0 ? 'block' : 'none';
+document.getElementById('galleryEmpty').style.display =
+visible===0?'block':'none';
 
 }
 
 
 /* LIGHTBOX */
-
 function openLightbox(src){
 
-  const lightbox =
-    document.getElementById('lightbox');
+const lightbox =
+document.getElementById('lightbox');
 
-  const image =
-    document.getElementById('lightboxImg');
+const image =
+document.getElementById('lightboxImg');
 
-  image.src = src;
+image.src=src;
 
-  lightbox.classList.add('show');
+lightbox.classList.add('show');
 
 }
-
 
 function closeLightbox(){
 
-  document
-    .getElementById('lightbox')
-    .classList.remove('show');
+document
+.getElementById('lightbox')
+.classList.remove('show');
 
 }
 
 
-/* ESC KEY */
-
+/* ESC */
 document.addEventListener('keydown',function(e){
 
-  if(e.key === 'Escape'){
-    closeLightbox();
-  }
+if(e.key==='Escape'){
+closeLightbox();
+}
 
 });
 
 
-/* WHATSAPP FORM */
-
+/* WHATSAPP */
 function sendWhatsApp(e){
 
-  e.preventDefault();
+e.preventDefault();
 
-  const n =
-    document.getElementById('name').value.trim();
+const n =
+document.getElementById('name').value.trim();
 
-  const p =
-    document.getElementById('phone').value.trim();
+const p =
+document.getElementById('phone').value.trim();
 
-  const m =
-    document.getElementById('msg').value.trim();
+const m =
+document.getElementById('msg').value.trim();
 
-  const text =
-    `Hello SP Electric & Computer,%0A%0A` +
-    `Name: ${encodeURIComponent(n)}%0A` +
-    `Phone: ${encodeURIComponent(p)}%0A` +
-    `Service: ${encodeURIComponent(m)}`;
+const text =
+`Hello SP Electric & Computer,%0A%0A` +
+`Name: ${encodeURIComponent(n)}%0A` +
+`Phone: ${encodeURIComponent(p)}%0A` +
+`Service: ${encodeURIComponent(m)}`;
 
-  window.open(
-    'https://wa.me/918768635426?text=' + text,
-    '_blank'
-  );
+window.open(
+'https://wa.me/918768635426?text='+text,
+'_blank'
+);
 
 }
 
