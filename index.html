@@ -3,137 +3,204 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="SP Electric & Computer - Electric, Computer, Laptop and CCTV services in Canning, West Bengal.">
 <title>SP Electric & Computer | Canning</title>
+
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{font-family:Arial,Helvetica,sans-serif;background:#061225;color:#fff;line-height:1.55}
-a{text-decoration:none;color:inherit}
-.container{width:min(1180px,94%);margin:auto}
-header{position:sticky;top:0;z-index:20;background:rgba(3,12,28,.94);backdrop-filter:blur(12px);border-bottom:1px solid #203453}
-.nav{height:70px;display:flex;align-items:center;justify-content:space-between}
-.logo{font-weight:900;font-size:1.25rem}.logo b{color:#ffe000}
-.navlinks{display:flex;gap:22px}.navlinks a:hover{color:#ffe000}
-.btn{display:inline-block;padding:12px 18px;border-radius:9px;background:linear-gradient(135deg,#ffd800,#ff9d00);color:#081225;font-weight:800}
-.hero{padding:24px 0 45px;background:radial-gradient(circle at 50% 10%,#123d79 0,#061225 55%)}
-.banner{width:100%;display:block;border-radius:18px;border:2px solid #1e7cff;box-shadow:0 20px 60px rgba(0,0,0,.4)}
-.hero-actions{text-align:center;padding-top:25px;display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
-.btn.alt{background:transparent;color:#fff;border:1px solid #385274}
-section{padding:80px 0}
-.head{text-align:center;margin-bottom:40px}.head h2{font-size:2.3rem}.head p{color:#aebdd1;margin-top:7px}
-.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
-.card{background:linear-gradient(180deg,#10233d,#0b172a);border:1px solid #263b5b;border-radius:16px;padding:25px;text-align:center;transition:.2s}
-.card:hover{transform:translateY(-5px);border-color:#2da7ff}
-.icon{font-size:2.4rem;margin-bottom:12px}.card h3{margin-bottom:7px}.card p{color:#aebdd1;font-size:.94rem}
-.about{display:grid;grid-template-columns:1.2fr .8fr;gap:28px;align-items:stretch}
-.box{background:#0d1d33;border:1px solid #263b5b;border-radius:18px;padding:30px}
-.box p{color:#b5c2d3;margin:12px 0}
-.list{display:grid;gap:10px;margin-top:18px}.list div{padding:10px 12px;background:#09162a;border-radius:8px}
-.contact{display:grid;grid-template-columns:1fr 1fr;gap:22px}
-.contact-item{padding:17px 0;border-bottom:1px solid #263b5b}.contact-item:last-child{border:0}
-.label{display:block;color:#7fd3ff;font-size:.85rem;font-weight:700;margin-bottom:4px}
-form{display:grid;gap:12px}input,textarea{width:100%;padding:14px;border-radius:9px;border:1px solid #314764;background:#071327;color:white;font:inherit}
-textarea{min-height:130px;resize:vertical}
-footer{padding:28px 0;border-top:1px solid #263b5b;text-align:center;color:#9eafc4}
-.float{position:fixed;right:18px;bottom:18px;z-index:30}
-@media(max-width:850px){.navlinks{display:none}.grid{grid-template-columns:1fr 1fr}.about,.contact{grid-template-columns:1fr}}
-@media(max-width:520px){.grid{grid-template-columns:1fr}.hero{padding-top:12px}.banner{border-radius:10px}section{padding:60px 0}.head h2{font-size:1.9rem}}
+body{
+font-family:Arial,sans-serif;
+background:#f4f7fb;
+color:#172033;
+line-height:1.6;
+}
+header{
+background:#071b3a;
+color:white;
+padding:22px 15px;
+text-align:center;
+}
+header h1{font-size:30px}
+header p{margin-top:5px;color:#d9e7ff}
+
+.container{
+max-width:1000px;
+margin:auto;
+padding:20px 15px;
+}
+
+.banner{
+width:100%;
+display:block;
+border-radius:16px;
+box-shadow:0 8px 25px rgba(0,0,0,.18);
+margin-bottom:20px;
+}
+
+.buttons{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:12px;
+margin:20px 0;
+}
+
+.btn{
+display:block;
+text-align:center;
+padding:15px 10px;
+border-radius:12px;
+text-decoration:none;
+font-weight:bold;
+color:white;
+font-size:16px;
+}
+
+.call{background:#0b7a35}
+.whatsapp{background:#16a34a}
+.email{background:#1769aa}
+
+.card{
+background:white;
+padding:22px;
+margin:18px 0;
+border-radius:16px;
+box-shadow:0 5px 18px rgba(0,0,0,.08);
+}
+
+.card h2{
+color:#071b3a;
+margin-bottom:12px;
+}
+
+.services{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:15px;
+}
+
+.service{
+padding:20px;
+background:#eef5ff;
+border-radius:14px;
+text-align:center;
+font-weight:bold;
+font-size:18px;
+}
+
+.contact{
+font-size:18px;
+}
+
+.contact a{
+color:#075fc7;
+font-weight:bold;
+text-decoration:none;
+}
+
+.address{
+font-size:20px;
+font-weight:bold;
+}
+
+.open{
+background:#071b3a;
+color:white;
+text-align:center;
+padding:18px;
+border-radius:14px;
+font-size:20px;
+font-weight:bold;
+}
+
+footer{
+margin-top:25px;
+background:#071b3a;
+color:white;
+text-align:center;
+padding:22px 15px;
+}
+
+@media(max-width:600px){
+header h1{font-size:25px}
+.buttons{grid-template-columns:1fr}
+.services{grid-template-columns:1fr}
+.banner{border-radius:10px}
+.address{font-size:18px}
+}
 </style>
 </head>
+
 <body>
+
 <header>
-  <div class="container nav">
-    <a class="logo" href="#home"><b>SP</b> Electric & Computer</a>
-    <div class="navlinks">
-      <a href="#home">Home</a><a href="#services">Services</a><a href="#about">About</a><a href="#contact">Contact</a>
-    </div>
-    <a class="btn" href="tel:+918768635426">Call Now</a>
-  </div>
+<h1>SP ELECTRIC & COMPUTER</h1>
+<p>Electric • Computer • Laptop • CCTV</p>
 </header>
 
-<main id="home">
-<section class="hero">
-  <div class="container">
-    <img class="banner" src="sp_electric_and_computer_banner.png" alt="SP Electric & Computer banner featuring Electric, Computer, Laptop and CCTV services">
-    <div class="hero-actions">
-      <a class="btn" href="tel:+918768635426">📞 Call 8768635426</a>
-      <a class="btn" href="https://wa.me/918768635426" target="_blank">💬 WhatsApp</a>
-      <a class="btn alt" href="#contact">Contact Details</a>
-    </div>
-  </div>
-</section>
+<div class="container">
 
-<section id="services">
-  <div class="container">
-    <div class="head"><h2>Our Services</h2><p>Electric, Computer, Laptop & CCTV solutions under one roof.</p></div>
-    <div class="grid">
-      <div class="card"><div class="icon">⚡</div><h3>Electric</h3><p>Wiring, switches, DB/MCB, fans, lights and electrical accessories.</p></div>
-      <div class="card"><div class="icon">🖥️</div><h3>Computer</h3><p>Sales, service, repair, accessories, software and networking.</p></div>
-      <div class="card"><div class="icon">💻</div><h3>Laptop</h3><p>New & used sales, service, upgrades, troubleshooting and support.</p></div>
-      <div class="card"><div class="icon">📹</div><h3>CCTV</h3><p>Installation, configuration, monitoring and security solutions.</p></div>
-    </div>
-  </div>
-</section>
+<img src="sp_electric_and_computer_banner.png"
+class="banner"
+alt="SP Electric and Computer">
 
-<section id="about">
-  <div class="container about">
-    <div class="box">
-      <h2>SP Electric & Computer</h2>
-      <p>Your trusted partner for electrical and computer solutions in Canning, West Bengal.</p>
-      <p>We provide practical solutions for homes, offices and businesses, with service available <b>24×7</b>.</p>
-      <div class="list">
-        <div>✓ Genuine Products</div><div>✓ Expert Technicians</div>
-        <div>✓ Best Price</div><div>✓ Reliable Service</div>
-      </div>
-    </div>
-    <div class="box">
-      <h2>Why Choose Us?</h2>
-      <p>One-stop support for power, computing and security needs.</p>
-      <a class="btn" href="#contact">Get in Touch</a>
-    </div>
-  </div>
-</section>
+<div class="buttons">
+<a class="btn call" href="tel:+918768635426">📞 CALL NOW</a>
 
-<section id="contact">
-  <div class="container">
-    <div class="head"><h2>Contact Us</h2><p>We're open 24×7 — always here for you.</p></div>
-    <div class="contact">
-      <div class="box">
-        <div class="contact-item"><span class="label">📞 CALL US</span><a href="tel:+918768635426">8768635426</a> / <a href="tel:+919832123146">9832123146</a></div>
-        <div class="contact-item"><span class="label">💬 WHATSAPP</span><a href="https://wa.me/918768635426" target="_blank">8768635426</a> / <a href="https://wa.me/919832123146" target="_blank">9832123146</a></div>
-        <div class="contact-item"><span class="label">📧 EMAIL</span><a href="mailto:spelectricandcomputer@gmail.com">spelectricandcomputer@gmail.com</a></div>
-        <div class="contact-item"><span class="label">📍 ADDRESS</span>Canning, Canning Town, South 24 Parganas, West Bengal, 743329</div>
-        <div class="contact-item"><span class="label">🕐 OPENING HOURS</span><b>24×7 — Open 24 Hours, 7 Days a Week</b></div>
-      </div>
-      <div class="box">
-        <h3>Send an Enquiry</h3>
-        <p>Fill this form and your WhatsApp app will open with the enquiry.</p>
-        <form onsubmit="sendWhatsApp(event)">
-          <input id="name" placeholder="Your name" required>
-          <input id="phone" placeholder="Your phone number" required>
-          <textarea id="msg" placeholder="What service do you need?" required></textarea>
-          <button class="btn" type="submit">Send via WhatsApp</button>
-        </form>
-      </div>
-    </div>
-  </div>
-</section>
-</main>
+<a class="btn whatsapp"
+href="https://wa.me/918768635426?text=Hello%20SP%20Electric%20%26%20Computer"
+target="_blank">💬 WHATSAPP</a>
 
-<a class="btn float" href="https://wa.me/918768635426" target="_blank">💬 WhatsApp</a>
-<footer>© <span id="year"></span> SP Electric & Computer • Canning, West Bengal • Open 24×7</footer>
+<a class="btn email"
+href="mailto:spelectricandcomputer@gmail.com">📧 EMAIL</a>
+</div>
 
-<script>
-document.getElementById('year').textContent = new Date().getFullYear();
-function sendWhatsApp(e){
-  e.preventDefault();
-  const n=document.getElementById('name').value.trim();
-  const p=document.getElementById('phone').value.trim();
-  const m=document.getElementById('msg').value.trim();
-  const text=`Hello SP Electric & Computer,%0AName: ${encodeURIComponent(n)}%0APhone: ${encodeURIComponent(p)}%0AService: ${encodeURIComponent(m)}`;
-  window.open('https://wa.me/918768635426?text='+text,'_blank');
-}
-</script>
+<div class="card">
+<h2>Our Services</h2>
+
+<div class="services">
+<div class="service">⚡ Electric Service</div>
+<div class="service">💻 Computer Service</div>
+<div class="service">💻 Laptop Service</div>
+<div class="service">📹 CCTV Installation & Service</div>
+</div>
+</div>
+
+<div class="card">
+<h2>About Us</h2>
+<p>
+SP Electric & Computer provides Electric, Computer, Laptop and CCTV
+installation & service in Canning and surrounding areas.
+We provide reliable service with customer satisfaction.
+</p>
+</div>
+
+<div class="card contact">
+<h2>Contact Us</h2>
+
+<p>📞 <a href="tel:+918768635426">8768635426</a></p>
+<p>📞 <a href="tel:+919832123146">9832123146</a></p>
+
+<p>📧 <a href="mailto:spelectricandcomputer@gmail.com">
+spelectricandcomputer@gmail.com
+</a></p>
+
+<br>
+
+<p class="address">
+📍 Canning, Canning Town,<br>
+South 24 Parganas, West Bengal – 743329
+</p>
+</div>
+
+<div class="open">
+🕐 OPEN 24 × 7
+</div>
+
+</div>
+
+<footer>
+<p>© 2026 SP Electric & Computer</p>
+<p>Canning, West Bengal</p>
+</footer>
+
 </body>
 </html>
