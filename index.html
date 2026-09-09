@@ -237,6 +237,7 @@ section{
   font-size:.94rem;
 }
 
+
 /* =========================
    OUR WORK / GALLERY
 ========================= */
@@ -267,6 +268,12 @@ section{
   display:block;
   object-fit:cover;
   background:#0a172a;
+  cursor:pointer;
+  transition:.3s;
+}
+
+.gallery-image:hover{
+  transform:scale(1.04);
 }
 
 .gallery-info{
@@ -282,6 +289,48 @@ section{
   color:#aebdd1;
   font-size:.9rem;
 }
+
+
+/* LIGHTBOX */
+
+.lightbox{
+  display:none;
+  position:fixed;
+  inset:0;
+  z-index:999;
+  background:rgba(0,0,0,.94);
+  align-items:center;
+  justify-content:center;
+  padding:25px;
+}
+
+.lightbox.show{
+  display:flex;
+}
+
+.lightbox img{
+  max-width:95%;
+  max-height:90vh;
+  border-radius:12px;
+  border:2px solid #2da7ff;
+  box-shadow:0 0 40px rgba(45,167,255,.25);
+}
+
+.lightbox-close{
+  position:absolute;
+  top:18px;
+  right:22px;
+  width:45px;
+  height:45px;
+  border:0;
+  border-radius:50%;
+  background:#ff3b3b;
+  color:white;
+  font-size:22px;
+  font-weight:bold;
+  cursor:pointer;
+}
+
 
 /* ABOUT */
 .about{
@@ -314,6 +363,7 @@ section{
   background:#09162a;
   border-radius:8px;
 }
+
 
 /* CONTACT */
 .contact{
@@ -360,6 +410,7 @@ textarea{
   resize:vertical;
 }
 
+
 /* FLOATING BUTTON */
 .float{
   position:fixed;
@@ -368,6 +419,7 @@ textarea{
   z-index:30;
 }
 
+
 /* FOOTER */
 footer{
   padding:28px 0;
@@ -375,6 +427,7 @@ footer{
   text-align:center;
   color:#9eafc4;
 }
+
 
 /* MOBILE */
 @media(max-width:850px){
@@ -448,6 +501,14 @@ footer{
     font-size:1.9rem;
   }
 
+  .lightbox{
+    padding:12px;
+  }
+
+  .lightbox img{
+    max-width:100%;
+  }
+
 }
 </style>
 </head>
@@ -471,13 +532,16 @@ footer{
       <a href="#contact">Contact</a>
     </div>
 
-    <a class="btn" href="tel:+918768635426">Call Now</a>
+    <a class="btn" href="tel:+918768635426">
+      Call Now
+    </a>
 
   </div>
 </header>
 
 
 <main id="home">
+
 
 <!-- HERO -->
 <section class="hero">
@@ -486,7 +550,11 @@ footer{
 
     <div class="brand-title">
       <span class="sp">⚡ SP ⚡</span>
-      <span class="name">ELECTRIC &amp; COMPUTER</span>
+
+      <span class="name">
+        ELECTRIC &amp; COMPUTER
+      </span>
+
       <div class="tagline">
         ELECTRICAL • COMPUTER • LAPTOP • CCTV
       </div>
@@ -499,18 +567,19 @@ footer{
 
     <div class="hero-actions">
 
-      <a class="btn" href="tel:+918768635426">
+      <a class="btn"
+         href="tel:+918768635426">
         📞 Call 8768635426
       </a>
 
-      <a
-        class="btn"
-        href="https://wa.me/918768635426"
-        target="_blank">
+      <a class="btn"
+         href="https://wa.me/918768635426"
+         target="_blank">
         💬 WhatsApp
       </a>
 
-      <a class="btn alt" href="#contact">
+      <a class="btn alt"
+         href="#contact">
         Contact Details
       </a>
 
@@ -527,44 +596,67 @@ footer{
   <div class="container">
 
     <div class="head">
+
       <h2>Our Services</h2>
+
       <p>
         Electric, Computer, Laptop &amp; CCTV solutions under one roof.
       </p>
+
     </div>
+
 
     <div class="grid">
 
       <a class="card" href="electric.html">
+
         <div class="icon">⚡</div>
+
         <h3>Electric</h3>
+
         <p>
           Wiring, switches, DB/MCB, fans, lights and electrical accessories.
         </p>
+
       </a>
 
+
       <a class="card" href="computer.html">
+
         <div class="icon">🖥️</div>
+
         <h3>Computer</h3>
+
         <p>
           Sales, service, repair, accessories, software and networking.
         </p>
+
       </a>
 
+
       <a class="card" href="laptop.html">
+
         <div class="icon">💻</div>
+
         <h3>Laptop</h3>
+
         <p>
           New &amp; used sales, service, upgrades, troubleshooting and support.
         </p>
+
       </a>
 
+
       <a class="card" href="cctv.html">
+
         <div class="icon">📹</div>
+
         <h3>CCTV</h3>
+
         <p>
           Installation, configuration, monitoring and security solutions.
         </p>
+
       </a>
 
     </div>
@@ -577,19 +669,24 @@ footer{
 <!-- =========================
      OUR WORK / GALLERY
 ========================= -->
+
 <section id="works">
 
   <div class="container">
 
     <div class="head">
+
       <h2>📸 Our Work</h2>
+
       <p>
         Some of our recent electrical, computer, laptop &amp; CCTV work.
       </p>
+
     </div>
 
 
     <div class="gallery">
+
 
       <!-- PHOTO 1 -->
       <div class="gallery-item">
@@ -597,11 +694,17 @@ footer{
         <img
           class="gallery-image"
           src="work1.jpg"
-          alt="Electrical work">
+          alt="Electrical Work"
+          onclick="openImage(this.src)">
 
         <div class="gallery-info">
+
           <h3>Electrical Work</h3>
-          <p>Professional electrical installation and service.</p>
+
+          <p>
+            Professional electrical installation and service.
+          </p>
+
         </div>
 
       </div>
@@ -613,11 +716,17 @@ footer{
         <img
           class="gallery-image"
           src="work2.jpg"
-          alt="Computer service">
+          alt="Computer Service"
+          onclick="openImage(this.src)">
 
         <div class="gallery-info">
+
           <h3>Computer Service</h3>
-          <p>Computer repair and technical support.</p>
+
+          <p>
+            Computer repair and technical support.
+          </p>
+
         </div>
 
       </div>
@@ -629,11 +738,17 @@ footer{
         <img
           class="gallery-image"
           src="work3.jpg"
-          alt="Laptop service">
+          alt="Laptop Service"
+          onclick="openImage(this.src)">
 
         <div class="gallery-info">
+
           <h3>Laptop Service</h3>
-          <p>Laptop repair, upgrade and maintenance.</p>
+
+          <p>
+            Laptop repair, upgrade and maintenance.
+          </p>
+
         </div>
 
       </div>
@@ -645,11 +760,17 @@ footer{
         <img
           class="gallery-image"
           src="work4.jpg"
-          alt="CCTV installation">
+          alt="CCTV Installation"
+          onclick="openImage(this.src)">
 
         <div class="gallery-info">
+
           <h3>CCTV Installation</h3>
-          <p>CCTV installation and security solutions.</p>
+
+          <p>
+            CCTV installation and security solutions.
+          </p>
+
         </div>
 
       </div>
@@ -661,11 +782,17 @@ footer{
         <img
           class="gallery-image"
           src="work5.jpg"
-          alt="Electrical installation">
+          alt="Electrical Installation"
+          onclick="openImage(this.src)">
 
         <div class="gallery-info">
-          <h3>Installation Work</h3>
-          <p>Reliable installation and maintenance service.</p>
+
+          <h3>Electrical Installation</h3>
+
+          <p>
+            Reliable installation and maintenance service.
+          </p>
+
         </div>
 
       </div>
@@ -677,20 +804,180 @@ footer{
         <img
           class="gallery-image"
           src="work6.jpg"
-          alt="SP Electric and Computer work">
+          alt="Completed Work"
+          onclick="openImage(this.src)">
 
         <div class="gallery-info">
+
           <h3>Completed Work</h3>
-          <p>Another completed project by SP Electric &amp; Computer.</p>
+
+          <p>
+            Another completed project by SP Electric &amp; Computer.
+          </p>
+
         </div>
 
       </div>
+
+
+      <!-- PHOTO 7 -->
+      <div class="gallery-item">
+
+        <img
+          class="gallery-image"
+          src="work7.jpg"
+          alt="Electric Work"
+          onclick="openImage(this.src)">
+
+        <div class="gallery-info">
+
+          <h3>Electric Work</h3>
+
+          <p>
+            Professional electrical service.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <!-- PHOTO 8 -->
+      <div class="gallery-item">
+
+        <img
+          class="gallery-image"
+          src="work8.jpg"
+          alt="Computer Work"
+          onclick="openImage(this.src)">
+
+        <div class="gallery-info">
+
+          <h3>Computer Work</h3>
+
+          <p>
+            Computer service and repair.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <!-- PHOTO 9 -->
+      <div class="gallery-item">
+
+        <img
+          class="gallery-image"
+          src="work9.jpg"
+          alt="Laptop Work"
+          onclick="openImage(this.src)">
+
+        <div class="gallery-info">
+
+          <h3>Laptop Work</h3>
+
+          <p>
+            Laptop service and maintenance.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <!-- PHOTO 10 -->
+      <div class="gallery-item">
+
+        <img
+          class="gallery-image"
+          src="work10.jpg"
+          alt="CCTV Work"
+          onclick="openImage(this.src)">
+
+        <div class="gallery-info">
+
+          <h3>CCTV Work</h3>
+
+          <p>
+            Security camera installation.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <!-- PHOTO 11 -->
+      <div class="gallery-item">
+
+        <img
+          class="gallery-image"
+          src="work11.jpg"
+          alt="Repair Work"
+          onclick="openImage(this.src)">
+
+        <div class="gallery-info">
+
+          <h3>Repair Work</h3>
+
+          <p>
+            Professional repair service.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <!-- PHOTO 12 -->
+      <div class="gallery-item">
+
+        <img
+          class="gallery-image"
+          src="work12.jpg"
+          alt="SP Electric & Computer Work"
+          onclick="openImage(this.src)">
+
+        <div class="gallery-info">
+
+          <h3>Our Work</h3>
+
+          <p>
+            SP Electric &amp; Computer completed work.
+          </p>
+
+        </div>
+
+      </div>
+
 
     </div>
 
   </div>
 
 </section>
+
+
+<!-- LIGHTBOX -->
+
+<div id="imageLightbox"
+     class="lightbox"
+     onclick="closeImage()">
+
+  <button
+    class="lightbox-close"
+    onclick="closeImage()">
+    ✕
+  </button>
+
+  <img
+    id="lightboxImage"
+    src=""
+    alt="Large Gallery Image"
+    onclick="event.stopPropagation()">
+
+</div>
 
 
 <!-- ABOUT -->
@@ -700,7 +987,9 @@ footer{
 
     <div class="box">
 
-      <h2>SP Electric &amp; Computer</h2>
+      <h2>
+        SP Electric &amp; Computer
+      </h2>
 
       <p>
         Your trusted partner for electrical and computer solutions
@@ -713,10 +1002,15 @@ footer{
       </p>
 
       <div class="list">
+
         <div>✓ Genuine Products</div>
+
         <div>✓ Expert Technicians</div>
+
         <div>✓ Best Price</div>
+
         <div>✓ Reliable Service</div>
+
       </div>
 
     </div>
@@ -724,7 +1018,9 @@ footer{
 
     <div class="box">
 
-      <h2>Why Choose Us?</h2>
+      <h2>
+        Why Choose Us?
+      </h2>
 
       <p>
         One-stop support for power, computing and security needs.
@@ -747,27 +1043,48 @@ footer{
   <div class="container">
 
     <div class="head">
-      <h2>Contact Us</h2>
+
+      <h2>
+        Contact Us
+      </h2>
+
       <p>
         We're open 24×7 — always here for you.
       </p>
+
     </div>
 
 
     <div class="contact">
 
+
       <div class="box">
 
+
         <div class="contact-item">
-          <span class="label">📞 CALL US</span>
-          <a href="tel:+918768635426">8768635426</a>
+
+          <span class="label">
+            📞 CALL US
+          </span>
+
+          <a href="tel:+918768635426">
+            8768635426
+          </a>
+
           /
-          <a href="tel:+919832123146">9832123146</a>
+
+          <a href="tel:+919832123146">
+            9832123146
+          </a>
+
         </div>
 
 
         <div class="contact-item">
-          <span class="label">💬 WHATSAPP</span>
+
+          <span class="label">
+            💬 WHATSAPP
+          </span>
 
           <a
             href="https://wa.me/918768635426"
@@ -782,69 +1099,96 @@ footer{
             target="_blank">
             9832123146
           </a>
+
         </div>
 
 
         <div class="contact-item">
-          <span class="label">📧 EMAIL</span>
+
+          <span class="label">
+            📧 EMAIL
+          </span>
 
           <a href="mailto:spelectricandcomputer@gmail.com">
             spelectricandcomputer@gmail.com
           </a>
+
         </div>
 
 
         <div class="contact-item">
-          <span class="label">📍 ADDRESS</span>
+
+          <span class="label">
+            📍 ADDRESS
+          </span>
 
           Canning, Canning Town,
           South 24 Parganas,
           West Bengal, 743329
+
         </div>
 
 
         <div class="contact-item">
-          <span class="label">🕐 OPENING HOURS</span>
 
-          <b>24×7 — Open 24 Hours, 7 Days a Week</b>
+          <span class="label">
+            🕐 OPENING HOURS
+          </span>
+
+          <b>
+            24×7 — Open 24 Hours, 7 Days a Week
+          </b>
+
         </div>
+
 
       </div>
 
 
       <div class="box">
 
-        <h3>Send an Enquiry</h3>
+        <h3>
+          Send an Enquiry
+        </h3>
 
         <p>
           Fill this form and your WhatsApp app will open
           with the enquiry.
         </p>
 
+
         <form onsubmit="sendWhatsApp(event)">
+
 
           <input
             id="name"
             placeholder="Your name"
             required>
 
+
           <input
             id="phone"
             placeholder="Your phone number"
             required>
+
 
           <textarea
             id="msg"
             placeholder="What service do you need?"
             required></textarea>
 
-          <button class="btn" type="submit">
+
+          <button
+            class="btn"
+            type="submit">
             Send via WhatsApp
           </button>
+
 
         </form>
 
       </div>
+
 
     </div>
 
@@ -856,6 +1200,7 @@ footer{
 
 
 <!-- FLOATING WHATSAPP -->
+
 <a
   class="btn float"
   href="https://wa.me/918768635426"
@@ -865,19 +1210,26 @@ footer{
 
 
 <!-- FOOTER -->
+
 <footer>
+
   © <span id="year"></span>
   SP Electric &amp; Computer
   • Canning, West Bengal
   • Open 24×7
+
 </footer>
 
 
 <script>
 
+/* YEAR */
+
 document.getElementById('year').textContent =
   new Date().getFullYear();
 
+
+/* WHATSAPP FORM */
 
 function sendWhatsApp(e){
 
@@ -904,6 +1256,50 @@ function sendWhatsApp(e){
   );
 
 }
+
+
+/* OPEN GALLERY IMAGE */
+
+function openImage(src){
+
+  const lightbox =
+    document.getElementById('imageLightbox');
+
+  const image =
+    document.getElementById('lightboxImage');
+
+  image.src = src;
+
+  lightbox.classList.add('show');
+
+  document.body.style.overflow = 'hidden';
+
+}
+
+
+/* CLOSE GALLERY IMAGE */
+
+function closeImage(){
+
+  const lightbox =
+    document.getElementById('imageLightbox');
+
+  lightbox.classList.remove('show');
+
+  document.body.style.overflow = '';
+
+}
+
+
+/* ESC KEY TO CLOSE */
+
+document.addEventListener('keydown', function(e){
+
+  if(e.key === 'Escape'){
+    closeImage();
+  }
+
+});
 
 </script>
 
