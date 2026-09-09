@@ -7,123 +7,84 @@
 
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
-body{
-font-family:Arial,sans-serif;
-background:#f4f7fb;
-color:#172033;
-line-height:1.6;
-}
-header{
-background:#071b3a;
-color:white;
-padding:22px 15px;
-text-align:center;
-}
+body{font-family:Arial,sans-serif;background:#f4f7fb;color:#172033;line-height:1.6}
+header{background:#071b3a;color:#fff;text-align:center;padding:25px 15px}
 header h1{font-size:30px}
 header p{margin-top:5px;color:#d9e7ff}
 
-.container{
-max-width:1000px;
-margin:auto;
-padding:20px 15px;
-}
+.container{max-width:1000px;margin:auto;padding:18px 15px}
 
 .banner{
-width:100%;
-display:block;
-border-radius:16px;
-box-shadow:0 8px 25px rgba(0,0,0,.18);
-margin-bottom:20px;
+width:100%;display:block;border-radius:16px;
+box-shadow:0 8px 25px rgba(0,0,0,.18);margin-bottom:18px
 }
 
-.buttons{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:12px;
-margin:20px 0;
-}
-
+.buttons{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
 .btn{
-display:block;
-text-align:center;
-padding:15px 10px;
-border-radius:12px;
-text-decoration:none;
-font-weight:bold;
-color:white;
-font-size:16px;
+display:block;text-align:center;padding:15px 8px;
+border-radius:12px;text-decoration:none;font-weight:bold;color:#fff
 }
-
-.call{background:#0b7a35}
+.call{background:#087f3d}
 .whatsapp{background:#16a34a}
 .email{background:#1769aa}
 
 .card{
-background:white;
-padding:22px;
-margin:18px 0;
-border-radius:16px;
-box-shadow:0 5px 18px rgba(0,0,0,.08);
+background:#fff;padding:22px;margin:18px 0;border-radius:16px;
+box-shadow:0 5px 18px rgba(0,0,0,.08)
 }
+.card h2{text-align:center;color:#071b3a;margin-bottom:15px}
 
-.card h2{
-color:#071b3a;
-margin-bottom:12px;
-}
-
-.services{
-display:grid;
-grid-template-columns:repeat(2,1fr);
-gap:15px;
-}
-
+.services{display:grid;grid-template-columns:repeat(2,1fr);gap:15px}
 .service{
-padding:20px;
-background:#eef5ff;
-border-radius:14px;
-text-align:center;
-font-weight:bold;
-font-size:18px;
+background:#eef5ff;padding:22px;text-align:center;
+border-radius:14px;font-size:18px;font-weight:bold
 }
 
-.contact{
-font-size:18px;
-}
-
-.contact a{
-color:#075fc7;
-font-weight:bold;
-text-decoration:none;
+.features{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.feature{
+background:#f8fafc;padding:18px;text-align:center;border-radius:12px
 }
 
 .address{
-font-size:20px;
-font-weight:bold;
+font-size:20px;font-weight:bold;text-align:center
+}
+
+.map{
+width:100%;height:300px;border:0;border-radius:14px
 }
 
 .open{
-background:#071b3a;
-color:white;
-text-align:center;
-padding:18px;
-border-radius:14px;
-font-size:20px;
-font-weight:bold;
+background:#071b3a;color:#fff;text-align:center;
+padding:18px;border-radius:14px;font-size:20px;font-weight:bold
+}
+
+.form input,.form select,.form textarea{
+width:100%;padding:13px;margin:7px 0;
+border:1px solid #ccd5e0;border-radius:9px;font-size:16px
+}
+
+.form button{
+width:100%;padding:14px;border:0;border-radius:10px;
+background:#16a34a;color:#fff;font-size:17px;font-weight:bold
+}
+
+.float{
+position:fixed;right:18px;bottom:18px;
+background:#16a34a;color:#fff;width:58px;height:58px;
+border-radius:50%;display:flex;align-items:center;
+justify-content:center;text-decoration:none;font-size:28px;
+box-shadow:0 5px 15px rgba(0,0,0,.3);z-index:99
 }
 
 footer{
-margin-top:25px;
-background:#071b3a;
-color:white;
-text-align:center;
-padding:22px 15px;
+margin-top:25px;background:#071b3a;color:#fff;
+text-align:center;padding:22px
 }
 
 @media(max-width:600px){
 header h1{font-size:25px}
-.buttons{grid-template-columns:1fr}
-.services{grid-template-columns:1fr}
-.banner{border-radius:10px}
+.buttons,.services{grid-template-columns:1fr}
+.features{grid-template-columns:1fr}
 .address{font-size:18px}
 }
 </style>
@@ -139,23 +100,19 @@ header h1{font-size:25px}
 <div class="container">
 
 <img src="sp_electric_and_computer_banner.png"
-class="banner"
-alt="SP Electric and Computer">
+class="banner" alt="SP Electric & Computer">
 
 <div class="buttons">
 <a class="btn call" href="tel:+918768635426">📞 CALL NOW</a>
-
 <a class="btn whatsapp"
 href="https://wa.me/918768635426?text=Hello%20SP%20Electric%20%26%20Computer"
 target="_blank">💬 WHATSAPP</a>
-
 <a class="btn email"
 href="mailto:spelectricandcomputer@gmail.com">📧 EMAIL</a>
 </div>
 
 <div class="card">
-<h2>Our Services</h2>
-
+<h2>🔧 OUR SERVICES</h2>
 <div class="services">
 <div class="service">⚡ Electric Service</div>
 <div class="service">💻 Computer Service</div>
@@ -165,42 +122,93 @@ href="mailto:spelectricandcomputer@gmail.com">📧 EMAIL</a>
 </div>
 
 <div class="card">
-<h2>About Us</h2>
-<p>
-SP Electric & Computer provides Electric, Computer, Laptop and CCTV
-installation & service in Canning and surrounding areas.
-We provide reliable service with customer satisfaction.
-</p>
+<h2>⭐ WHY CHOOSE US?</h2>
+<div class="features">
+<div class="feature">✅ Reliable Service</div>
+<div class="feature">⚡ Quick Response</div>
+<div class="feature">🕐 24×7 Service</div>
+</div>
 </div>
 
-<div class="card contact">
-<h2>Contact Us</h2>
-
-<p>📞 <a href="tel:+918768635426">8768635426</a></p>
-<p>📞 <a href="tel:+919832123146">9832123146</a></p>
-
-<p>📧 <a href="mailto:spelectricandcomputer@gmail.com">
-spelectricandcomputer@gmail.com
-</a></p>
-
-<br>
-
+<div class="card">
+<h2>📍 OUR LOCATION</h2>
 <p class="address">
-📍 Canning, Canning Town,<br>
+Canning, Canning Town,<br>
 South 24 Parganas, West Bengal – 743329
 </p>
+<br>
+
+<iframe class="map"
+src="https://www.google.com/maps?q=Canning,Town,West+Bengal+743329&output=embed"
+loading="lazy"></iframe>
 </div>
 
-<div class="open">
-🕐 OPEN 24 × 7
+<div class="card">
+<h2>📝 SEND ENQUIRY</h2>
+
+<form class="form" onsubmit="sendWhatsApp();return false;">
+<input id="name" type="text" placeholder="Your Name" required>
+<input id="phone" type="tel" placeholder="Phone Number" required>
+
+<select id="service" required>
+<option value="">Select Service</option>
+<option>Electric Service</option>
+<option>Computer Service</option>
+<option>Laptop Service</option>
+<option>CCTV Service</option>
+</select>
+
+<textarea id="message" rows="4"
+placeholder="Write your requirement"></textarea>
+
+<button type="submit">💬 SEND ENQUIRY ON WHATSAPP</button>
+</form>
 </div>
 
+<div class="card">
+<h2>📞 CONTACT US</h2>
+<p style="text-align:center;font-size:18px">
+<a href="tel:+918768635426">8768635426</a><br>
+<a href="tel:+919832123146">9832123146</a><br><br>
+<a href="mailto:spelectricandcomputer@gmail.com">
+spelectricandcomputer@gmail.com
+</a>
+</p>
 </div>
+
+<div class="open">🕐 OPEN 24 × 7</div>
+
+</div>
+
+<a class="float"
+href="https://wa.me/918768635426"
+target="_blank">💬</a>
 
 <footer>
 <p>© 2026 SP Electric & Computer</p>
 <p>Canning, West Bengal</p>
 </footer>
+
+<script>
+function sendWhatsApp(){
+const name=document.getElementById("name").value;
+const phone=document.getElementById("phone").value;
+const service=document.getElementById("service").value;
+const message=document.getElementById("message").value;
+
+const text =
+"Hello SP Electric & Computer\n\n"+
+"Name: "+name+"\n"+
+"Phone: "+phone+"\n"+
+"Service: "+service+"\n"+
+"Requirement: "+message;
+
+window.open(
+"https://wa.me/918768635426?text="+encodeURIComponent(text),
+"_blank"
+);
+}
+</script>
 
 </body>
 </html>
